@@ -5,16 +5,16 @@ edition = "2021"
 authors = ["zeroicai <devzeroicai@gmail.com>"]
 license = "MIT OR Apache-2.0"
 description = "Example applications demonstrating the zeroicai multi-agent framework"
-repository = "https://github.com/zeroicai/z-examples"
+repository = "https://github.com/ZeroicAI/z-examples"
 keywords = ["agents", "multi-agent", "examples", "autonomous"]
 publish = false
 
 [dependencies]
-z-core = { git = "https://github.com/zeroicai/z-core", branch = "main" }
-z-messaging = { git = "https://github.com/zeroicai/z-messaging", branch = "main" }
-z-cognition = { git = "https://github.com/zeroicai/z-cognition", branch = "main" }
-z-patterns = { git = "https://github.com/zeroicai/z-patterns", branch = "main" }
-z-runtime = { git = "https://github.com/zeroicai/z-runtime", branch = "main" }
+z-core = { git = "https://github.com/ZeroicAI/z-core", branch = "main" }
+z-messaging = { git = "https://github.com/ZeroicAI/z-messaging", branch = "main" }
+z-cognition = { git = "https://github.com/ZeroicAI/z-cognition", branch = "main" }
+z-patterns = { git = "https://github.com/ZeroicAI/z-patterns", branch = "main" }
+z-runtime = { git = "https://github.com/ZeroicAI/z-runtime", branch = "main" }
 async-trait = "0.1"
 tokio = { version = "1.0", features = ["full"] }
 serde = { version = "1.0", features = ["derive"] }
