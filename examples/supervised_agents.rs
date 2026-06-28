@@ -1,6 +1,6 @@
 //! Agent crashes on purpose, Supervisor restarts it automatically.
-use agentropic_core::{Agent, AgentContext, AgentId, AgentError, AgentResult};
-use agentropic_runtime::prelude::*;
+use z_core::{Agent, AgentContext, AgentId, AgentError, AgentResult};
+use z_runtime::prelude::*;
 use async_trait::async_trait;
 use std::sync::atomic::{AtomicU32, Ordering};
 use std::sync::Arc;
