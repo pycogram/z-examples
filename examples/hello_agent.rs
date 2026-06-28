@@ -1,6 +1,6 @@
 //! Simplest possible agent — spawns with Runtime, ticks, shuts down.
-use agentropic_core::{Agent, AgentContext, AgentId, AgentResult};
-use agentropic_runtime::prelude::*;
+use z_core::{Agent, AgentContext, AgentId, AgentResult};
+use z_runtime::prelude::*;
 use async_trait::async_trait;
 
 struct GreeterAgent {
