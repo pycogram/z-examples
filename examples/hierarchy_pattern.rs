@@ -1,7 +1,7 @@
 //! Hierarchy: Commander → Captain → Soldiers. Orders flow down, reports flow up.
-use agentropic_core::{Agent, AgentContext, AgentId, AgentResult};
-use agentropic_patterns::hierarchy::{Hierarchy, Level, LevelType};
-use agentropic_runtime::prelude::*;
+use z_core::{Agent, AgentContext, AgentId, AgentResult};
+use z_patterns::hierarchy::{Hierarchy, Level, LevelType};
+use z_runtime::prelude::*;
 use async_trait::async_trait;
 
 struct CommanderAgent { id: AgentId, issued: bool, reports: u32 }
@@ -101,7 +101,7 @@ impl Agent for SoldierAgent {
 #[tokio::main]
 async fn main() -> Result<(), RuntimeError> {
     println!("╔═══════════════════════════════════════════════╗");
-    println!("║   Agentropic — Hierarchy Pattern              ║");
+    println!("║   ZeroicAI — Hierarchy Pattern              ║");
     println!("║   Commander → Captain → Soldiers              ║");
     println!("╚═══════════════════════════════════════════════╝\n");
 

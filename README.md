@@ -1,6 +1,6 @@
-# Agentropic Examples
+# ZeroicAI Examples
 
-Working examples demonstrating the [Agentropic](https://github.com/agentropic) multi-agent framework.
+Working examples demonstrating the [ZeroicAI](https://github.com/zeroicai) multi-agent framework.
 
 ## Examples
 

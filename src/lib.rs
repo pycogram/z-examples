@@ -1,4 +1,4 @@
-//! # Agentropic Examples
+//! # ZeroicAI Examples
 //!
 //! Run any example with:
 //! ```bash

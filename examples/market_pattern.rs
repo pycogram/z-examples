@@ -1,7 +1,7 @@
 //! Market: Agents bid in an auction. Highest bidder wins the resource.
-use agentropic_core::{Agent, AgentContext, AgentId, AgentResult};
-use agentropic_patterns::market::{Auction, AuctionType, Bid};
-use agentropic_runtime::prelude::*;
+use z_core::{Agent, AgentContext, AgentId, AgentResult};
+use z_patterns::market::{Auction, AuctionType, Bid};
+use z_runtime::prelude::*;
 use async_trait::async_trait;
 use std::sync::{Arc, Mutex};
 
@@ -105,7 +105,7 @@ impl Agent for TraderAgent {
 
 #[tokio::main]
 async fn main() -> Result<(), RuntimeError> {
-    println!("=== Agentropic — Market Pattern ===");
+    println!("=== ZeroicAI — Market Pattern ===");
     println!("    Sealed-bid auction for GPU cluster\n");
 
     let auction = Arc::new(Mutex::new(

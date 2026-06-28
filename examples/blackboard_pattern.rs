@@ -1,7 +1,7 @@
 //! Blackboard: Agents read and write to shared knowledge space to solve a problem.
-use agentropic_core::{Agent, AgentContext, AgentId, AgentResult};
-use agentropic_patterns::blackboard::Blackboard;
-use agentropic_runtime::prelude::*;
+use z_core::{Agent, AgentContext, AgentId, AgentResult};
+use z_patterns::blackboard::Blackboard;
+use z_runtime::prelude::*;
 use async_trait::async_trait;
 use std::sync::{Arc, Mutex};
 
@@ -127,7 +127,7 @@ impl Agent for DecisionAgent {
 #[tokio::main]
 async fn main() -> Result<(), RuntimeError> {
     println!("╔═══════════════════════════════════════════════╗");
-    println!("║   Agentropic — Blackboard Pattern             ║");
+    println!("║   ZeroicAI — Blackboard Pattern             ║");
     println!("║   Shared knowledge for collaborative solving  ║");
     println!("╚═══════════════════════════════════════════════╝\n");
 

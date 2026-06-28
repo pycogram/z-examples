@@ -1,8 +1,8 @@
 //! Full system demo: agents run, talk, reason, and self-heal.
-use agentropic_core::{Agent, AgentContext, AgentId, AgentError, AgentResult};
-use agentropic_cognition::Rule;
-use agentropic_runtime::prelude::*;
-use agentropic_runtime::CognitiveAgent;
+use z_core::{Agent, AgentContext, AgentId, AgentError, AgentResult};
+use z_cognition::Rule;
+use z_runtime::prelude::*;
+use z_runtime::CognitiveAgent;
 use async_trait::async_trait;
 use std::sync::atomic::{AtomicU32, Ordering};
 use std::sync::Arc;
@@ -122,7 +122,7 @@ impl Agent for UnreliableAgent {
 #[tokio::main]
 async fn main() -> Result<(), RuntimeError> {
     println!("╔═══════════════════════════════════════════════╗");
-    println!("║   Agentropic — Full System Demo               ║");
+    println!("║   ZeroicAI — Full System Demo               ║");
     println!("║   Running + Messaging + Reasoning + Recovery   ║");
     println!("╚═══════════════════════════════════════════════╝\n");
 
@@ -142,8 +142,8 @@ async fn main() -> Result<(), RuntimeError> {
 
     let mut thinker = CognitiveAgent::from_config("data/beliefs.json", "data/config.json");
     thinker.add_rule(Rule::new("topic:what_is")
-        .with_condition("what").with_condition("agentropic")
-        .with_conclusion("what_is_agentropic"));
+        .with_condition("what").with_condition("zeroicai")
+        .with_conclusion("what_is_zeroicai"));
     thinker.add_rule(Rule::new("topic:patterns")
         .with_condition("pattern").with_condition("support")
         .with_conclusion("patterns"));
@@ -161,8 +161,8 @@ async fn main() -> Result<(), RuntimeError> {
         async fn initialize(&mut self, _ctx: &AgentContext) -> AgentResult<()> { Ok(()) }
         async fn execute(&mut self, ctx: &AgentContext) -> AgentResult<()> {
             if !self.asked {
-                println!("  [QuickAsker] → \"What is Agentropic?\"");
-                ctx.send_message("thinker", "query", "What is Agentropic?");
+                println!("  [QuickAsker] → \"What is ZeroicAI?\"");
+                ctx.send_message("thinker", "query", "What is ZeroicAI?");
                 self.asked = true;
             }
             tokio::time::sleep(std::time::Duration::from_millis(200)).await;

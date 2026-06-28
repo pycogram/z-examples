@@ -1,20 +1,20 @@
 [package]
-name = "agentropic-examples"
+name = "z-examples"
 version = "0.1.0"
 edition = "2021"
-authors = ["Agentropic <agentropic@gmail.com>"]
+authors = ["zeroicai <devzeroicai@gmail.com>"]
 license = "MIT OR Apache-2.0"
-description = "Example applications demonstrating the Agentropic multi-agent framework"
-repository = "https://github.com/agentropic/agentropic-examples"
+description = "Example applications demonstrating the zeroicai multi-agent framework"
+repository = "https://github.com/zeroicai/z-examples"
 keywords = ["agents", "multi-agent", "examples", "autonomous"]
 publish = false
 
 [dependencies]
-agentropic-core = { git = "https://github.com/agentropic/agentropic-core", branch = "fixes-all-v3" }
-agentropic-messaging = { git = "https://github.com/agentropic/agentropic-messaging", branch = "main" }
-agentropic-cognition = { git = "https://github.com/agentropic/agentropic-cognition", branch = "main" }
-agentropic-patterns = { git = "https://github.com/agentropic/agentropic-patterns", branch = "main" }
-agentropic-runtime = { git = "https://github.com/agentropic/agentropic-runtime", branch = "docs/json" }
+z-core = { git = "https://github.com/zeroicai/z-core", branch = "main" }
+z-messaging = { git = "https://github.com/zeroicai/z-messaging", branch = "main" }
+z-cognition = { git = "https://github.com/zeroicai/z-cognition", branch = "main" }
+z-patterns = { git = "https://github.com/zeroicai/z-patterns", branch = "main" }
+z-runtime = { git = "https://github.com/zeroicai/z-runtime", branch = "main" }
 async-trait = "0.1"
 tokio = { version = "1.0", features = ["full"] }
 serde = { version = "1.0", features = ["derive"] }

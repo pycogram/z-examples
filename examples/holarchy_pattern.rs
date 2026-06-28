@@ -1,7 +1,7 @@
 //! Holarchy: Nested autonomous units. Parent delegates, children act independently.
-use agentropic_core::{Agent, AgentContext, AgentId, AgentResult};
-use agentropic_patterns::holarchy::{Holarchy, Holon};
-use agentropic_runtime::prelude::*;
+use z_core::{Agent, AgentContext, AgentId, AgentResult};
+use z_patterns::holarchy::{Holarchy, Holon};
+use z_runtime::prelude::*;
 use async_trait::async_trait;
 
 struct HolonAgent { id: AgentId, name: String, is_composite: bool, delegated: bool }
@@ -64,7 +64,7 @@ impl Agent for HolonAgent {
 #[tokio::main]
 async fn main() -> Result<(), RuntimeError> {
     println!("╔═══════════════════════════════════════════════╗");
-    println!("║   Agentropic — Holarchy Pattern               ║");
+    println!("║   ZeroicAI — Holarchy Pattern               ║");
     println!("║   Nested autonomous units                     ║");
     println!("╚═══════════════════════════════════════════════╝\n");
 

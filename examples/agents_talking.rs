@@ -1,6 +1,6 @@
 //! Three agents: Asker asks questions, Responder answers, Observer watches.
-use agentropic_core::{Agent, AgentContext, AgentId, AgentResult};
-use agentropic_runtime::prelude::*;
+use z_core::{Agent, AgentContext, AgentId, AgentResult};
+use z_runtime::prelude::*;
 use async_trait::async_trait;
 
 struct AskerAgent { id: AgentId, asked: bool }
@@ -15,8 +15,8 @@ impl Agent for AskerAgent {
     }
     async fn execute(&mut self, ctx: &AgentContext) -> AgentResult<()> {
         if !self.asked {
-            println!("  [Asker] → \"What patterns does Agentropic support?\"");
-            ctx.send_message("responder", "query", "What patterns does Agentropic support?");
+            println!("  [Asker] → \"What patterns does ZeroicAI support?\"");
+            ctx.send_message("responder", "query", "What patterns does ZeroicAI support?");
             self.asked = true;
         }
         tokio::time::sleep(std::time::Duration::from_millis(200)).await;
